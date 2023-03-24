@@ -1,0 +1,36 @@
+public class Product {
+    private String pname;
+    private String pcode;
+    private double price;
+    
+    public Product(String pname, String pcode, double price) {
+        this.pname = pname;
+        this.pcode = pcode;
+        this.price = price;
+    }
+    
+    public double getPrice() {
+        return price;
+    }
+    
+    public String toString() {
+        return pname + " (" + pcode + ") - $" + price;
+    }
+    
+    public static void main(String[] args) {
+        Product[] products = new Product[3];
+        products[0] = new Product("Product A", "A001", 10.99);
+        products[1] = new Product("Product B", "B002", 5.99);
+        products[2] = new Product("Product C", "C003", 8.49);
+        
+        Product lowestPriceProduct = products[0];
+        for (int i = 1; i < products.length; i++) {
+            if (products[i].getPrice() < lowestPriceProduct.getPrice()) {
+                lowestPriceProduct = products[i];
+            }
+        }
+        
+        System.out.println("The product with the lowest price is:");
+        System.out.println(lowestPriceProduct);
+    }
+}
