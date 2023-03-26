@@ -1,0 +1,26 @@
+public class Rectangle{
+    double length;
+    double breadth;
+     void setData()
+     {
+        length=l;
+        breadth=b;
+     }
+     double getArea(){
+        double rectArea;
+        rectArea=length*breadth;
+        return rectArea;
+     }
+}
+class RectangleArea{
+public static void main (string args[]){
+    Rectangle obj=new Rectangle();
+    obj.setData(12.48,13.0);
+    double len=obj.length;
+    double bre=obj.breadth;
+    System.out.println("lenght="+len);
+    System.out.println("breadth="+bre);
+    double result=obj.rectArea();
+    System.out.println("Area of Rectangle="+result);
+}
+}
