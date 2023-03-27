@@ -1,0 +1,56 @@
+public class CPU {
+    private double price;
+
+    public CPU(double price) {
+        this.price = price;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public class Processor {
+        private int numberOfCores;
+        private String manufacturer;
+
+        public Processor(int numberOfCores, String manufacturer) {
+            this.numberOfCores = numberOfCores;
+            this.manufacturer = manufacturer;
+        }
+
+        public int getNumberOfCores() {
+            return numberOfCores;
+        }
+
+        public String getManufacturer() {
+            return manufacturer;
+        }
+    }
+
+    public static class RAM {
+        private int memory;
+        private String manufacturer;
+
+        public RAM(int memory, String manufacturer) {
+            this.memory = memory;
+            this.manufacturer = manufacturer;
+        }
+
+        public int getMemory() {
+            return memory;
+        }
+
+        public String getManufacturer() {
+            return manufacturer;
+        }
+    }
+
+    public static void main(String[] args) {
+        CPU cpu = new CPU(1000.00);
+        CPU.Processor processor = cpu.new Processor(4, "Intel");
+        CPU.RAM ram = new CPU.RAM(8, "Corsair");
+        System.out.println("CPU price: $" + cpu.getPrice());
+        System.out.println("Processor: " + processor.getManufacturer() + " " + processor.getNumberOfCores() + " cores");
+        System.out.println("RAM: " + ram.getManufacturer() + " " + ram.getMemory() + " GB");
+    }
+}
