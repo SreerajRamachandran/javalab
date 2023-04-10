@@ -50,10 +50,15 @@ break;
 }
 case 7:
 {
-System.out.println(" enter the substring ");
-String sub=in.next();
-int index=str.indexOf(sub);
-System.out.println("substring is :" +index);
+    System.out.println(" enter the substring ");
+ String sub = in.next();
+    int index = str.indexOf(sub);
+    if (index == -1) {
+        System.out.println("Substring not found.");
+    } else {
+        System.out.println("Substring found at index " + index);
+    }
+    break;
 }
 case 8:
 {
@@ -94,7 +99,6 @@ while(choice!=11);
 
 }
 }
-
 
 
 
