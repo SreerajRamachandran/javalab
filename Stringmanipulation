@@ -5,7 +5,7 @@ Scanner in = new Scanner(System.in);
 System.out.println("Enter the  string");
 String str= in.nextLine();
 System.out.println("Choose your operation");
-System.out.println("\n 1.Length \n 2.To upper \n 3.To lower \n 4.Replace \n 5.Concatinate \n 6.Insert \n 7.Reverse \n 8.delete \n 9.Exit");
+System.out.println("\n 1.Length \n 2.To upper \n 3.To lower \n 4.Replace \n 5.Concatinate  \n6.chararray \n 7.Position \n 8.Insert \n 9.Reverse \n 10.delete \n 10.Exit");
 int choice=in.nextInt();
 StringBuffer sb =new StringBuffer("welcome");
 do
@@ -21,57 +21,82 @@ break;
 case 2:
 {
 String upper=str.toUpperCase();
-System.out.println("String in upper case is "+upper);
+System.out.println("String in upper case is : "+upper);
 break;
 }
 case 3:
 {
 String lower=str.toLowerCase();
-System.out.println("String in lower case is "+lower);
+System.out.println("String in lower case is : "+lower);
 break;
 }
 case 4:
 {
 String strreplace=str.replace("e","z");
-System.out.println("replaced string is "+strreplace);
+System.out.println("replaced string is : "+strreplace);
 break;
 }
 case 5:
 {
 String strconcat=str.concat("im raj");
-System.out.println("replaced string is "+strconcat);
+System.out.println("replaced string is : "+strconcat);
 break;
 }
 case 6:
 {
-sb.insert(2,"to");
-System.out.println("String after inserting:"+sb);
+char [] chararray=str.toCharArray();
+System.out.println("charecter array is :"+chararray);
 break;
 }
-
-
 case 7:
 {
-sb.reverse();
-System.out.println("String after reversing:"+sb);
-break;
+int index=str.indexof();
+System.out.println("substring is :" +index);
 }
 case 8:
 {
-sb.delete(2,11);
-System.out.println("String after deleting:"+sb);
+sb.insert(2,"to");
+System.out.println("String after inserting :"+sb);
 break;
 }
+
+
+case 8:
+{
+char [] chararray=str.CharArray();
+System.out.println("charecter array is :"+chararray);
+break;
+}
+
+
+
 case 9:
+{
+sb.reverse();
+System.out.println("String after reversing :"+sb);
+break;
+}
+case 10:
+{
+sb.delete(2,11);
+System.out.println("String after deleting :"+sb);
+break;
+}
+case 11:
 {
 break;
 }
 
 default:
 {
-System.out.println("enter next string");
+System.out.println("invalid choice");
 break;
 }
+}
+if(choice!=9)
+{
+System.out.println("\n enter the next operation");
+choice=in.nextInt();
 }
 }
 while(choice!=9);
