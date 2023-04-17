@@ -1,0 +1,52 @@
+import java.util.Scanner;
+public class Employee{
+	private int eid;
+	private String ename;
+	private double salary;
+
+	public Employee(int eid,String ename,double salary){
+	this.eid=eid;
+	this.ename=ename;
+	this.salary=salary;
+	}
+
+	public int get_eid(){
+		return eid;
+	}
+	
+	public int get_ename(){
+		return ename;
+	}
+	
+
+	public int get_salary(){
+		return salary;
+	}
+public static void main(String args[]){
+	Scanner in = new Scanner(System.in);
+	System.out.println("enter the number of employees");
+	int n=in.nextInt();
+
+	Employee employees[]=new Employee[n];
+        
+	for(i=0;i<n;i++){
+		System.out.println("enter the employees info");
+		System.out.println("ID:");
+		int eid=Scanner.nextInt();
+		System.out.println("Name:");
+		String ename=Scanner.nextInt();
+		System.out.println("SALARY:");
+		double salary=Scanner.nextDouble();
+	employee[i]=new employee(eid,ename,salary);
+	}
+	System.out.println("enter the  id of the employee ");
+	int sid=scanner.nextInt();
+ 	for(Employee:employee){
+	if(employee.get_eid()==sid)
+	{
+	System.out.println("employee found"+employee.get_eid+employee.get_ename+get_salary);
+	}
+	}
+	System.out.println("employee Not found"+"with sid: "+sid);
+	}
+	}
