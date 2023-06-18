@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 class Person {
     protected String name;
     protected String gender;
@@ -98,4 +97,9 @@ public class Main {
 
         scanner.close();
 
-        System.out.println("\nTeacher Details
+        System.out.println("\nTeacher Details");
+        for (Teacher teacher : teachers) {
+            teacher.displayDetails();
+        }
+    }
+}
