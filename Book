@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class Publisher {
 private String name;
 
@@ -59,11 +60,32 @@ public void display() {
 
 }
 
-public class Book {
+public class Book{
 public static void main (String[] args) {
-Literature book1 = new Literature("Pride and Prejudice", "Jane Austen", "Penguin", "Romance");
-Fiction book2 = new Fiction("1984", "George Orwell", "Vintage", "Dystopian");
+Scanner sc=new Scanner(System.in);
+System.out.println();
+System.out.println("Enter the details of the Literature Book");
+System.out.println("enter then name of the Book:");
+String LiteratureBook=sc.nextLine();
+System.out.println("enter then name of the Author:");
+String LiteratureAuthor=sc.nextLine();
+System.out.println("enter then name of the Publisher:");
+String LiteraturePublisher=sc.nextLine();
+System.out.println("enter then name of the Subgenre:");
+String LiteratureSubgenre=sc.nextLine();
+System.out.println();
 
+System.out.println("Enter the details of the Fiction Book:");
+System.out.println("Enter then name of the Book:");
+String FictionBook=sc.nextLine();
+System.out.println("Enter then name of the Author:");
+String FictionAuthor=sc.nextLine();
+System.out.println("Enter then name of the Publisher:");
+String FictionPublisher=sc.nextLine();
+System.out.println("Enter then name of the Subgenre:");
+String FictionSubgenre=sc.nextLine();
+Literature book1 = new Literature(LiteratureBook,LiteratureAuthor,LiteraturePublisher,LiteratureSubgenre);
+Fiction book2 = new Fiction(FictionBook,FictionAuthor,FictionPublisher,FictionSubgenre);
     book1.display();
     System.out.println();
     book2.display();
